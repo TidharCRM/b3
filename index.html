@@ -9,10 +9,10 @@
 <meta property="og:title" content="לגעת ברוח · לטפל בגוף — טיפולי מגע ודיקור" />
 <meta property="og:description" content="המתח לא יושב רק בשרירים. הוא יושב במערכת כולה. טיפול שמחזיר את הגוף לעצמו." />
 
-<!-- Heebo as a fallback so the page renders cleanly until the Tzofia font files are added -->
+<!-- Premium Hebrew type — Frank Ruhl Libre (display serif) + Assistant (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Frank+Ruhl+Libre:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
   /* ───── FUP Tzofia ───── */
@@ -61,7 +61,8 @@
     --ease:         cubic-bezier(.4,0,.2,1);
     --container:    1240px;
 
-    --font:         'Tzofia','Heebo','Assistant',system-ui,-apple-system,sans-serif;
+    --font:         'Assistant','Heebo',system-ui,-apple-system,sans-serif;
+    --font-display: 'Frank Ruhl Libre','Assistant',Georgia,serif;
   }
 
   *,*::before,*::after{box-sizing:border-box}
@@ -1070,6 +1071,17 @@
     .hero-sub{font-size:clamp(15px,4.6vw,18px);max-width:100%}
     .hero-visual{max-width:300px}
   }
+
+  /* ───── premium display type — Frank Ruhl Libre on headings & key display ───── */
+  h1,h2,h3,h4,
+  .hero-title,.section-title,.splash-title,.splash-title-pre,
+  .cta-strip h2,.price-new,.hero-tag-num,
+  .method-card h3,.audience-card h3,.include-card h3,.how-card h3,
+  .contact-card h3,.brand-text strong,.faq-q,.footer-col h4,
+  .narrative .lead,.about-copy .lead{
+    font-family:var(--font-display)}
+  .hero-title{font-weight:800;letter-spacing:-.01em}
+  .section-title,.splash-title{font-weight:800}
 </style>
 </head>
 <body class="splash-active">
